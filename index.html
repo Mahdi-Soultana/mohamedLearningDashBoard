@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Monitize_Game_Front</title>
+  </head>
+  <body>
+    <h1>DashBord games Monitize</h1>
+    <form enctype="multipart/form-data">
+      <div class="loading"><h4>Loading....</h4></div>
+      <div>
+        <label for="isPublic" class="isPublic">isPublic</label>
+        <input type="checkbox" id="isPublic" />
+        <span></span>
+      </div>
+
+      <div>
+        <label for="link">URL</label>
+        <input
+          type="url"
+          id="link"
+          class="link"
+          required
+          placeholder="your Link Here !"
+        />
+      </div>
+
+      <div>
+        <label for="timePushAds">Go to Ads Time (sec): </label>
+        <input
+          type="number"
+          id="timePushAds"
+          required
+          min="1"
+          placeholder="3"
+        />
+      </div>
+      <div>
+        <label for="timeShowingPopUp">PopUp time (sec) : </label>
+        <input
+          type="number"
+          id="timeShowingPopUp"
+          required
+          min="1"
+          placeholder="3"
+        />
+      </div>
+
+      <div>
+        <label for="byClicking">Enter Ads By Cliking :</label>
+        <input type="checkbox" id="byClicking" />
+        <span></span>
+      </div>
+      <div>
+        <label for="showPopUp">show PopUp :</label>
+        <input type="checkbox" id="showPopUp" />
+        <span></span>
+      </div>
+      <div>
+        <label for="byClicking">Upload Image Ads</label>
+        <input type="file" id="files" />
+      </div>
+      <div>
+        <button type="submit">Submit</button>
+      </div>
+    </form>
+    <script src="script.js"></script>
+  </body>
+</html>
