@@ -22,7 +22,7 @@ async function HandelSubmit(e) {
   try {
     if (link.value) {
       fetch(
-        crosHeader + "https://monitizegame.herokuapp.com/cpa_monitize/edit",
+        crosHeader + "https://cpaproject2.herokuapp.com/cpa_monitize/edit",
         {
           method: "PUT",
           headers: {
@@ -61,7 +61,7 @@ async function fetchData() {
   console.log("fetching ....");
   loading.classList.add("display");
 
-  fetch(crosHeader + "https://monitizegame.herokuapp.com/cpa_monitize/")
+  fetch(crosHeader + "https://cpaproject2.herokuapp.com/cpa_monitize/")
     .then(res => {
       console.log(res);
       let datajson = res.json();
@@ -109,15 +109,12 @@ const upload = () => {
 
   formData.append("avatar", files.files[0]);
 
-  fetch(
-    crosHeader + "https://monitizegame.herokuapp.com/cpa_monitize/img_ads",
-    {
-      // Your POST endpoint
-      method: "POST",
+  fetch(crosHeader + "https://cpaproject2.herokuapp.com/cpa_monitize/img_ads", {
+    // Your POST endpoint
+    method: "POST",
 
-      body: formData // This is your file object
-    }
-  )
+    body: formData // This is your file object
+  })
     .then(
       res => res.json()
       // if the response is a JSON object
